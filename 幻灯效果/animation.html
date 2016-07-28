@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>幻灯效果</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 125px;
+            margin: 50px auto;
+            overflow: hidden;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+            background-position: center;
+            animation: mymove 5s infinite;
+        }
+        
+        @keyframes "mymove" {
+            0% {
+                background-size: contain;
+                background: url(images/1.jpg) no-repeat;
+            }
+            25% {
+                background-size: contain;
+                background: url(images/2.jpg) no-repeat;
+            }
+            50% {
+                background-size: contain;
+                background: url(images/3.jpg) no-repeat;
+            }
+            75% {
+                background-size: contain;
+                background: url(images/4.jpg) no-repeat;
+            }
+            100% {
+                background-size: contain;
+                background: url(images/1.jpg) no-repeat;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+    </div>
+    <canvas id="women">你们</canvas>
+    <script>
+    </script>
+</body>
+
+</html>
+<script>
+</script>
