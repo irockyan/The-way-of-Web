@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>新增加的元素</title>
+</head>
+
+<body>
+
+    <!-- 用于定义视频
+    poster为展示页
+    src中支持MP4、WebM、Ogg三种格式 -->
+    <video src="./videos/上午01-H5概述（吹牛波）.mp4" poster="./images/007-750首页_06.png" controls="controls" autoplay>您的浏览器不支持视频流
+    </video>
+
+    <!-- 用于定义音频 -->
+    <audio src="./audios/123.mp3" controls autoplay="">您的浏览器不支持音频流</audio>
+
+    <!-- 定义嵌入的内容，比如插件
+        定义嵌入内容的类型 -->
+    <embed type="audio/mp3" src="./audios/123.mp3" width="300" height="300">
+
+    <!-- 对文字进行高亮显示 -->
+    <p>
+        这里有一组文字
+        <mark>这里是高亮</mark>
+    </p>
+
+    <!-- 进度条 -->
+    <progress value="50" max="100">不支持此标签的时候显示</progress>
+
+    <!-- 定义度量衡。仅用于已知最大和最小值的度量 -->
+    <meter value="0.5"></meter>
+    <meter value="5" min="0" max="10"></meter>
+
+    <!-- 定义时间 -->
+    <time>这里用于表示时间</time>
+
+    <!-- 拼音
+            rp中是不支持此标签时使用的文本rt中是拼音文本 -->
+    <ruby>天下<rt>tianxia</rt></ruby>
+
+    <!-- wbr换行的是在父亲或者浏览器窗口够宽时不必要换行，当宽度不够时进行换行，而br是肯定要进行换行 可以用于一个过长的单词从中间某个位置换行，中文一般无法用到-->
+    <p>这是是一顿啊很长的文字很长啊很长啊啊啊<wbr>换行了不知道可以不</wbr>
+    </p>
+
+
+    <!-- canvas提供一个画布，用于js进行操作 -->
+    <canvas id="canvas" width="300" height="300"></canvas>
+
+    <!-- 定义命令按钮，比如单选按钮、复选框或按钮 -->
+    <command type="command">Click Me!</command>
+
+    <!-- 定义文档的细节，open为表示文档是否可见 -->
+    <details open>
+        <summary>标题</summary>
+        <p>这里是关于这个标题的详情</p>
+    </details>
+
+    <!-- safari不可用,chrome支持不够好可以做输入提示使用 -->
+    <input list="cars" />
+    <datalist id="cars">
+    	<option value="BMW">
+    	<option value="Ford">
+    	<option value="Volvo">
+    </datalist>
+
+    <!-- 标签规定用于表单的密钥对生成器字段。
+            当提交表单时，私钥存储在本地，公钥发送到服务器 -->
+    <form class="" action="index.html" method="post">
+        输入密码：<input type="text" name="name" value="">
+        进行加密：<keygen name="name" challenge="string" keytype="RSA" keyparams="medium">
+        <input type="submit">
+    </form>
+
+
+    <!-- 标签定义不同类型的输出，比如脚本的输出 -->
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+    <input type="range" id="a" value="50">100
+    +<input type="number" id="b" value="50">
+    =<output name="x" for="a b"></output>
+    </form>
+
+
+    <!-- 菜单选项，目前不被所有的浏览器支持 -->
+    <menu type="toolbar">
+     <li>
+      <menu label="File">
+       <button type="button" onclick="file_new()">新建</button>
+       <button type="button" onclick="file_open()">打开</button>
+       <button type="button" onclick="file_save()">保存</button>
+      </menu>
+     </li>
+     <li>
+      <menu label="Edit">
+       <button type="button" onclick="edit_cut()">剪切</button>
+       <button type="button" onclick="edit_copy()">复制</button>
+       <button type="button" onclick="edit_paste()">粘贴</button>
+      </menu>
+     </li>
+    </menu>
+
+    <!-- 对话框 -->
+    <dialog open>咱们来谈话啊</dialog><br/><br/><br/>
+    <dialog open>好的啊</dialog>
+
+
+    <!-- input中的最新的属性 date/month/week/time/datetime/datetime-local -->
+    时间选择器:<input type="month" name="name" value="">
+</body>
+
+</html>
