@@ -12,9 +12,14 @@
         <li>列表元素3</li>
     </ul>
     <p>这里是第二段文字，用于测试designMode</p>
+    <!--spellcheck的属性值必须写上，不能用简写-->
+    <input type="text" name="" value="" spellcheck="true">
+        <input type="text" name="" value="" spellcheck="true" tabindex="2">
+    <input type="text" name="" value="" spellcheck="true">
+    <textarea rows="4" cols="5" spellcheck="false" tabindex="1"></textarea>
     <script>
-        document.designMode = "on";
-        document.querySelector('ul').hidden = true;
+        // document.designMode = "on";
+        // document.querySelector('ul').hidden = true;
     </script>
 </body>
 </html>
