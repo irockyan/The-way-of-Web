@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>自动验证</title>
+</head>
+
+<body>
+    <form id="testform" onsubmit="return check();" novalidate="false">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        <input type="submit">
+    </form>
+    <script>
+    function check(){
+        var emial = document.getElementById('email');
+        if(!emial.checkValidity()){
+            console.log('你好');
+            alert('请输入正确的邮箱地址');
+        }
+    }
+
+    </script>
+</body>
+
+</html>

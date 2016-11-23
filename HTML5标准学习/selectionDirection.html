@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择方向的展示</title>
+</head>
+<body>
+    <form>
+        <input type="text" name="test" selectionDirection="backward" minlength="3">
+        <input type="button" value="点击我" onclick="alertSelection()">
+        <input type="checkbox" id="cb" indeterminate>测试
+        <input type="image" src="./images/007-750首页_06.png" alt="图片" width="100" height="100">
+        <textarea rows="4" cols="5" maxlength="20" wrap="soft"></textarea>
+
+        <form action="./test.php" method="post">
+            <textarea rows="5" cols="6" maxlength="100" name="name"></textarea>
+            <input type="submit" value="提交"/>
+        </form>
+    </form>
+    <script>
+        function alertSelection(){
+            console.log(document.forms[0]);
+            var control = document.forms[0]['test'];
+            control.value = 
+            console.log(control);
+            var Direction = control.selectionDirection;
+            alert(Direction);
+        }
+        var cb = document.getElementById('cb');
+        console.log(cb.indeterminate);
+        cb.indeterminate = true;
+        console.log(cb.getAttribute('indeterminate'));
+    </script>
+</body>
+</html>
