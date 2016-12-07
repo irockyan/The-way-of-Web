@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>绘制矩形</title>
+</head>
+
+<body>
+    <canvas id="canvas">请升级您的浏览器</canvas>
+    <script>
+        var canvas = document.querySelector('#canvas'),
+        //只有2d的属性，没有3d的属性。获取画布
+            content = canvas.getContext('2d');
+            //fillStyle 属性设置或返回用于填充绘画的颜色、渐变或模式。
+            //fillRect用于设置填充
+            content.fillStyle = '#EEEEFF';
+            content.fillRect(0,0,400,300);
+
+            //strokeStyle用于描边
+            content.fillStyle = 'red';
+            content.strokeStyle = 'blue';
+            content.lineWidth = 1;
+            content.fillRect(50,50,100,100);
+            content.strokeRect(50,50,100,100);
+
+            //清空某个矩形框的东西
+            content.clearRect(50,50,50,50);
+    </script>
+</body>
+
+</html>

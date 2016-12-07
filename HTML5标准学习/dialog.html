@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dialog会话窗口</title>
+</head>
+<body>
+    <input type="button" value="打开对话框" onclick="document.getElementById('dg').showModal();">
+    <dialog id="dg" style="width:9%;text-align:center;">
+    <h1>用户登陆</h1>
+    <main>
+        <form>
+            <label for="txtName" value="用户名："/>
+            <input type="text" id="txtName"/>
+            <br/>
+            <label for="txtPassword" value="密码："/>
+            <input type="txtPassword" id="txtPassword">
+            <input type="button" value="登录">
+            <input type="button" value="关闭" onclick="document.getElementById('dg').close();">
+        </form>
+    </main>
+    </dialog>
+</body>
+</html>
