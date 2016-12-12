@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绘制圆形</title>
+</head>
+<body>
+    <!--画布的默认大小是300*200-->
+    <canvas id="canvas" width="1000" height="500">请升级您的浏览器</canvas>
+    <script>
+        var canvas = document.querySelector('canvas');
+            content = canvas.getContext('2d');
+            content.fillStyle = '#EEEEFF';
+            content.fillRect(0,0,500,500);
+
+            //绘制一个圆形
+            var n = 0;
+            for(var i =0; i < 10; i ++){
+                content.beginPath();
+                // content.arc(i*25,i*25,i*10,0,Math.PI *2,true);
+                // content.ellipse(i*25,i*5,i*10,i*5,30,0,Math.PI*2,true);
+                content.closePath();
+                content.fillStyle = 'rgba(255,0,0,.25)';
+                content.fill();
+            }
+    </script>
+</body>
+</html>
