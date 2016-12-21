@@ -1,5 +1,39 @@
-    p {
+p {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+}
+
+.spinner_cover {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.spinner {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    border-radius: 50%;
+    animation: circle 1s infinite linear;
+    border: 10px solid white;
+    border-right-color: #818f92;
+    border-top-color: #818f92;
+    border-left-color: #818f92;
+}
+
+@keyframes circle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
 }
